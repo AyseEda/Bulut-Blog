@@ -1,0 +1,26 @@
+@model BlogPostViewModel
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-9">
+            <div class="bg-white p-4">
+                <h1 class="h4 mb-4">En Çok Okunan Gönderiler</h1>
+                 @foreach(var blogpost in Model.BlogPosts){
+                    <div class="card bg-tranparent border-0 mb-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="~/img/@blogpost.Image" class="img-fluid rounded" alt="">
+                            </div>
+
+                            <div class="col-8">
+                                <h5><a href="/blogposts/details/@blogpost.Url" class="btn-libk fw-bold">@blogpost.Title</a></h5>
+                                 <p>@blogpost.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-3">
+                 
+                 }
+            </div>
+        </div>
+        
+    </div>
+    

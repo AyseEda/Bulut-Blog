@@ -1,0 +1,15 @@
+@model List<Categorie>
+<div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Categorie</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-inline d-flex flex-wrap gap-2">
+                        @foreach(var categorie in Model){
+                            <li class="lis-inline-item">
+                                <a class="btn btn-outline-info btn-sm">@categorie.Text</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
